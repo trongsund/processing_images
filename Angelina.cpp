@@ -41,12 +41,12 @@ int main()
 
     BITMAPINFOHEADER BitMapInfo;
 
-    std::string name;
+    std::string name, name_out;
 
     //for (int s = 1; s < 32; ++s) {
         
-        std::ifstream f_in("Ярослав Сергеевич.bmp", std::ios::binary);
-        std::ofstream f_out("Ярослав Сергеевич жёлто-голубой 3.bmp", std::ios::binary);
+        std::ifstream f_in(name, std::ios::binary);
+        std::ofstream f_out(name_out, std::ios::binary);
 
         f_in.read(reinterpret_cast<char*>(&BfType), sizeof(unsigned short int));
 
